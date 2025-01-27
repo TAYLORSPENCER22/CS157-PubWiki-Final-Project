@@ -1,0 +1,39 @@
+POST http://localhost:9000/api/wiki/
+Content-Type: application/json
+
+{
+    "title": "artificial intell",
+    "category": "Technology",
+    "author": "sarah jenson",
+    "urlName": "artificialintel",
+    "html": "today we will learn about artificial intelligence",
+    "password": "abc123"
+}
+
+###
+
+//search method
+GET http://localhost:9000/api/wiki/search/artificial
+
+###
+
+//finding something by URL 
+GET http://localhost:9000/api/wiki/artificialintel
+
+###
+
+PATCH http://localhost:9000/api/wiki/artificialintel/abc123
+Content-Type: application/json
+
+{   
+     "title": "artificial intel",
+    "category": "Technology",
+    "author": "sarah jenson",
+    "urlName": "artificialintel",
+    "html": "today we will learn about artificial intelligence"
+}
+
+    
+###
+
+DELETE http://localhost:9000/api/wiki/delete/artificialintel/abc123
